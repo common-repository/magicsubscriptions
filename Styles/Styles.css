@@ -1,0 +1,434 @@
+/**
+ * MagicSubscriptions WordPress Plugin
+ * Copyright (C) 2019 Ronnie Barker
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
+ **/
+
+:root
+{
+	--ms-font-family: sans-serif;
+	--ms-font-weight-light: 300;
+	--ms-font-weight-normal: 400;
+	--ms-font-weight-bold: 500;
+	--ms-font-spacing: normal;
+	--ms-theme-primary: rgb(255, 140, 0);
+	--ms-theme-primary-rgb: 255, 140, 0;
+	--ms-theme-primary-contrast: rgba(0, 0, 0, 0.2);
+	--ms-theme-accent: rgb(128, 0, 128);
+	--ms-theme-accent-rgb: 128, 0, 128;
+	--ms-theme-accent-contrast: rgba(255, 255, 255, 0.8);
+	--ms-theme-warn: rgb(255, 99, 71);
+	--ms-theme-warn-rgb: 255, 99, 71;
+	--ms-theme-warn-contrast: rgba(255, 255, 255, 0.8);
+	--ms-theme-cta: darkblue;
+	--ms-theme-cta-contrast: rgba(255, 255, 255, 0.8);
+}
+
+
+
+.magic-subs.ms-registered .ms-card
+{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1.5em;
+}
+
+
+
+.magic-subs.ms-registered .ms-card .ms-content
+{
+	display: flex;
+}
+
+
+
+.magic-subs.ms-registered.ms-wide .ms-card .ms-content
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+
+.magic-subs.ms-registered.ms-wide .ms-card .ms-content *
+{
+	flex-grow: 1;
+}
+
+
+
+.magic-subs.ms-registered.ms-tall .ms-card .ms-content
+{
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+.magic-subs.ms-registered form
+{
+	margin: 0;
+}
+
+
+
+.magic-subs.ms-registered.ms-tall .ms-actions
+{
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+.magic-subs.ms-registered.ms-wide .ms-actions
+{
+	display: flex;
+	flex-direction: row;
+}
+
+
+
+.magic-subs.ms-registered label
+{
+	font-size: 20px;
+	color: dimgray;
+	line-height: inherit;
+}
+
+
+
+.magic-subs.ms-registered form
+{
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+.magic-subs.ms-registered ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1.5em 0;
+	font-size: 14px;
+}
+
+
+
+.magic-subs.ms-registered li
+{
+	margin-bottom: 2px;
+}
+
+
+
+.magic-subs.ms-registered .ms-name
+{
+	font-weight: var(--ms-font-weight-bold);
+	font-style: italic;
+	text-transform: uppercase;
+	color: var(--ms-theme-accent);
+}
+
+
+
+@media screen and (max-width: 959px)
+{
+	.magic-subs.ms-registered.ms-wide .ms-card .ms-content
+	{
+		flex-direction: column;
+	}
+}
+
+
+
+@media screen and (max-width: 599px)
+{
+	.magic-subs.ms-registered.ms-wide .ms-actions
+	{
+		flex-direction: column;
+	}
+}
+
+
+
+/* /////////////////////// v Sub-Type v ////////////////// */
+
+.magic-subs .ms-sub-type
+{
+	background: white;
+}
+
+
+
+.magic-subs .ms-sub-type .ms-card
+{
+	flex-direction: column;
+	box-sizing: border-box;
+	display: flex;
+	border: none;
+	color: rgb(41, 41, 46);
+}
+
+
+
+.magic-subs .ms-sub-type h3
+{
+	margin: 4px;
+	font-size: 24px;
+	font-weight: var(--ms-font-weight-bold);
+	text-transform: uppercase;
+}
+
+
+
+.magic-subs .ms-sub-type p
+{
+	font-size: 16px;
+	margin: 4px;
+}
+
+
+
+.magic-subs .ms-sub-type h4
+{
+	margin: 4px;
+	font-size: 20px;
+	font-weight: var(--ms-font-weight-bold);
+}
+
+
+
+/* /////////////////////// ^ Sub-Type ^ ////////////////// */
+
+/* /////////////////////// v Plans v ////////////////// */
+
+.magic-subs,
+.magic-subs *
+{
+	letter-spacing: var(--ms-font-spacing);
+}
+
+
+
+.magic-subs
+{
+	font-family: var(--ms-font-family), roboto, sans-serif;
+	font-weight: var(--ms-font-weight-normal);
+	box-sizing: border-box;
+}
+
+
+
+.magic-subs.ms-plans
+{
+	text-align: center;
+}
+
+
+
+.magic-subs h1
+{
+	margin: 4px 4px 20px 4px;
+	font-size: 32px;
+	font-weight: var(--ms-font-weight-bold);
+	color: var(--ms-theme-primary);
+	opacity: 0.75;
+	text-align: center;
+}
+
+
+
+.magic-subs .ms-button
+{
+	margin-bottom: 0;
+	font-family: inherit;
+	font-weight: var(--ms-font-weight-bold);
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 36px;
+	color: #333;
+	background-color: #EEE;
+}
+
+
+
+.magic-subs .ms-icon-button
+{
+	width: 32px;
+	max-width: 32px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0;
+	border-radius: 50%;
+	height: 32px;
+	border: none;
+	background-color: #EEE;
+	transition: all 0.3s;
+}
+
+
+
+.magic-subs .ms-icon-button:hover,
+.magic-subs .ms-button:hover
+{
+	background-color: #d5d5d5;
+}
+
+
+
+.magic-subs .ms-button:focus
+{
+	outline: 0;
+}
+
+
+
+.magic-subs a.ms-button
+{
+	text-decoration: inherit !important;
+}
+
+
+
+.magic-subs .ms-raised-button
+{
+	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+	cursor: pointer;
+	outline: 0;
+	border: none;
+	display: inline-block;
+	white-space: nowrap;
+	vertical-align: baseline;
+	text-align: center;
+	margin: 0 8px 0 0;
+	padding: 0 16px;
+	border-radius: 4px;
+	transition: background .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+}
+
+
+
+.magic-subs .ms-flat-button
+{
+	cursor: pointer;
+	outline: 0;
+	border: none;
+	display: inline-block;
+	white-space: nowrap;
+	vertical-align: baseline;
+	text-align: center;
+	margin: 0 8px 0 0;
+	padding: 0 16px;
+	border-radius: 4px;
+	transition: background .4s cubic-bezier(.25, .8, .25, 1);
+}
+
+
+
+.magic-subs .ms-raised-button:active
+{
+	box-shadow: none;
+}
+
+
+
+.magic-subs .ms-button.ms-colour-primary,
+.magic-subs .ms-button.ms-colour-primary:hover
+{
+	background-color: var(--ms-theme-primary);
+	color: var(--ms-theme-primary-contrast)
+}
+
+
+
+.magic-subs .ms-button.ms-colour-accent,
+.magic-subs .ms-button.ms-colour-accent:hover
+{
+	background-color: var(--ms-theme-accent);
+	color: var(--ms-theme-accent-contrast)
+}
+
+
+
+.magic-subs .ms-button.ms-colour-warn,
+.magic-subs .ms-button.ms-colour-warn:hover
+{
+	background-color: var(--ms-theme-warn);
+	color: var(--ms-theme-warn-contrast)
+}
+
+
+
+.magic-subs .ms-button.ms-colour-cta,
+.magic-subs .ms-button.ms-colour-cta:hover
+{
+	background-color: var(--ms-theme-cta);
+	color: var(--ms-theme-cta-contrast)
+}
+
+
+
+.magic-subs .ms-icon-button.ms-colour-primary,
+.magic-subs .ms-icon-button.ms-colour-primary:hover
+{
+	outline: none;
+	color: var(--ms-theme-primary)
+}
+
+
+
+.magic-subs .ms-icon-button.ms-colour-accent,
+.magic-subs .ms-icon-button.ms-colour-accent:hover
+{
+	outline: none;
+	color: var(--ms-theme-accent);
+}
+
+
+
+.magic-subs .ms-icon-button.ms-colour-warn,
+.magic-subs .ms-icon-button.ms-colour-warn:hover
+{
+	outline: none;
+	color: var(--ms-theme-warn);
+}
+
+
+
+.magic-subs .ms-icon-button.ms-colour-cta
+.magic-subs .ms-icon-button.ms-colour-cta:hover
+{
+	outline: none;
+	color: var(--ms-theme-cta);
+}
+
+
+
+.magic-subs.ms-registered .ms-cart form
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 0;
+}
+
+
+
+.magic-subs.ms-registered .ms-cart form > *
+{
+	margin-right: 8px;
+}
